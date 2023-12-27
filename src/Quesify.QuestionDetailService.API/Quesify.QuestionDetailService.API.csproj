@@ -9,17 +9,17 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-    <PackageReference Include="Quesify.SharedKernel.AspNetCore.Logging" Version="1.0.4" />
-    <PackageReference Include="Quesify.SharedKernel.AspNetCore.Swagger" Version="1.0.3" />
-    <PackageReference Include="Quesify.SharedKernel.Caching.Redis" Version="1.0.3" />
-    <PackageReference Include="Quesify.SharedKernel.Core" Version="1.0.3" />
-    <PackageReference Include="Quesify.SharedKernel.EventBus.Kafka" Version="1.0.4" />
-    <PackageReference Include="Quesify.SharedKernel.Guids" Version="1.0.3" />
-    <PackageReference Include="Quesify.SharedKernel.Json.Newtonsoft" Version="1.0.3" />
-    <PackageReference Include="Quesify.SharedKernel.MongoDB" Version="1.0.1" />
-    <PackageReference Include="Quesify.SharedKernel.Serialization" Version="1.0.3" />
-    <PackageReference Include="Quesify.SharedKernel.TimeProviders" Version="1.0.3" />
-    <PackageReference Include="Quesify.SharedKernel.Utilities" Version="1.0.3" />
+    <PackageReference Include="Quesify.SharedKernel.AspNetCore.Logging" Version="1.0.5" />
+    <PackageReference Include="Quesify.SharedKernel.AspNetCore.Swagger" Version="1.0.4" />
+    <PackageReference Include="Quesify.SharedKernel.Caching.Redis" Version="1.0.4" />
+    <PackageReference Include="Quesify.SharedKernel.Core" Version="1.0.4" />
+    <PackageReference Include="Quesify.SharedKernel.EventBus.Kafka" Version="1.0.5" />
+    <PackageReference Include="Quesify.SharedKernel.Guids" Version="1.0.4" />
+    <PackageReference Include="Quesify.SharedKernel.Json.Newtonsoft" Version="1.0.4" />
+    <PackageReference Include="Quesify.SharedKernel.MongoDB" Version="1.0.2" />
+    <PackageReference Include="Quesify.SharedKernel.Serialization" Version="1.0.4" />
+    <PackageReference Include="Quesify.SharedKernel.TimeProviders" Version="1.0.4" />
+    <PackageReference Include="Quesify.SharedKernel.Utilities" Version="1.0.4" />
     <PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
     <PackageReference Include="Serilog.Sinks.Seq" Version="6.0.0" />
     <PackageReference Include="Steeltoe.Discovery.Eureka" Version="3.2.6" />
