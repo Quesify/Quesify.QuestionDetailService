@@ -4,17 +4,15 @@ using FluentValidation.AspNetCore;
 using Microsoft.OpenApi.Models;
 using Quesify.QuestionDetailService.API.Data.Contexts;
 using Quesify.QuestionDetailService.API.IntegrationEvents.EventHandlers;
-using Quesify.SharedKernel.AspNetCore.Swagger.Filters;
 using Quesify.SharedKernel.Caching;
-using Quesify.SharedKernel.Caching.Redis;
 using Quesify.SharedKernel.EventBus;
 using Quesify.SharedKernel.Guids;
 using Quesify.SharedKernel.Json;
-using Quesify.SharedKernel.MongoDB.Models;
 using Quesify.SharedKernel.TimeProviders;
 using Quesify.SharedKernel.Utilities.Guards;
 using Serilog;
 using Serilog.Events;
+using Steeltoe.Discovery.Client;
 using System.Reflection;
 using System.Text.Json.Serialization;
 
@@ -127,6 +125,8 @@ public static class DependencyInjection
         services.AddTransient<AnswerVotedIntegrationEventHandler>();
         services.AddTransient<UserCreatedIntegrationEventHandler>();
         services.AddTransient<UserUpdatedIntegrationEventHandler>();
+
+        services.AddDiscoveryClient(configuration);
 
         return services;
     }
