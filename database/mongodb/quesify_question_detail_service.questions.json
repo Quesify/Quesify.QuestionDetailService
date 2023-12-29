@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$binary": {
+      "base64": "qK9zXKXPEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "title": "Virtualization: Blazor WASM vs Blazor Server",
+  "body": "Why does it take ~15 seconds to display 50,000 records from a Web API in Blazor WASM, but <2 seconds in Blazor Server? Using virtualization in both cases. Is there something that should be made for the WASM case?",
+  "user_id": {
+    "$binary": {
+      "base64": "F7wif6XPEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "score": 2,
+  "creation_date": {
+    "$date": "2023-12-28T22:23:01.195Z"
+  }
+},
+{
+  "_id": {
+    "$binary": {
+      "base64": "2gsutaXPEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "title": "Boost serialize for std::basic_string with custom allocator",
+  "body": "This seemed to work fine till I tried to serialize a string which had a space in it.\r\n\r\nSerialization is done into a boost::archive::text_oarchive and the separator is set to space. So after deserialization only the first part of the string got read from the archive e.g. I wrote \"Hello World\" to the archive but only got \"Hello\" after deserialization. For std::string boost adds a length field before the text. This is not the case for the custom string.",
+  "user_id": {
+    "$binary": {
+      "base64": "F7wif6XPEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "score": 0,
+  "creation_date": {
+    "$date": "2023-12-28T22:24:24.005Z"
+  }
+},
+{
+  "_id": {
+    "$binary": {
+      "base64": "4658aqXVEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "title": "Virtualization Server",
+  "body": "The bounty expires in 19 hours. Answers to this question are eligible for a +50 reputation bounty. Peter Thompson wants to draw more attention to this question.\r\nI am trying to write an R shiny app that, given a directory of image files, takes user input and decides which images to display on the page. The number of images may vary depending on the user's input. I have chosen to reach this goal using a \"lookup table\", a CSV file that contains the name of all the image file paths as one column and a filtering column that matches the user's input. I have a directory called \"IMAGES_\" with three PNG files, and my lookup table",
+  "user_id": {
+    "$binary": {
+      "base64": "sUHmqaXOEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "score": 1,
+  "creation_date": {
+    "$date": "2023-12-28T23:07:37.154Z"
+  }
+}]

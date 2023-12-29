@@ -29,12 +29,6 @@ public class AnswerCreatedIntegrationEventHandler : IIntegrationEventHandler<Ans
 
     public async Task HandleAsync(AnswerCreatedIntegrationEvent integrationEvent)
     {
-        var cacheKey = _cacheKeyGenerator.GenerateCacheKey("GetQuestionDetailById", integrationEvent.QuestionId);
-        if (await _cacheService.AnyAsync(cacheKey))
-        {
-            await _cacheService.RemoveAsync(cacheKey);
-        }
-
         var answer = new Answer()
         {
             Id = integrationEvent.AnswerId,
@@ -46,5 +40,11 @@ public class AnswerCreatedIntegrationEventHandler : IIntegrationEventHandler<Ans
         };
 
         await _context.Answers.InsertOneAsync(answer);
+
+        var cacheKey = _cacheKeyGenerator.GenerateCacheKey("GetQuestionDetailById", integrationEvent.QuestionId);
+        if (await _cacheService.AnyAsync(cacheKey))
+        {
+            await _cacheService.RemoveAsync(cacheKey);
+        }
     }
 }

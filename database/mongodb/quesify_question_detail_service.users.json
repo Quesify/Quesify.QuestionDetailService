@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$binary": {
+      "base64": "Yfj2P6XIEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "user_name": "CustomAdmin",
+  "score": 0,
+  "profile_image_url": null
+},
+{
+  "_id": {
+    "$binary": {
+      "base64": "sUHmqaXOEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "user_name": "Enes_Ucar",
+  "score": 30,
+  "profile_image_url": "attachments/bfd4af10-d9a5-ee11-828e-202b20d3c2e1.png"
+},
+{
+  "_id": {
+    "$binary": {
+      "base64": "F7wif6XPEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "user_name": "Enes_Ucar2",
+  "score": 68,
+  "profile_image_url": "attachments/dfc97a2f-d3a5-ee11-828e-202b20d3c2e1.jpg"
+}]

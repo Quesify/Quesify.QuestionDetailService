@@ -4,21 +4,29 @@ using Quesify.QuestionDetailService.API.Aggregates.Questions;
 using Quesify.QuestionDetailService.API.Aggregates.Users;
 using Quesify.QuestionDetailService.API.Data.Contexts;
 using Quesify.QuestionDetailService.API.IntegrationEvents.Events;
+using Quesify.SharedKernel.Caching;
 using Quesify.SharedKernel.EventBus.Abstractions;
 
 namespace Quesify.QuestionDetailService.API.IntegrationEvents.EventHandlers;
 
 public class QuestionVotedIntegrationEventHandler : IIntegrationEventHandler<QuestionVotedIntegrationEvent>
 {
-    private readonly QuestionDetailContext _context;
-    private readonly ILogger<QuestionCreatedIntegrationEventHandler> _logger;
+    private readonly QuestionDetailContext _context; 
+    private readonly ICacheService _cacheService;
+    private readonly ICacheKeyGenerator _cacheKeyGenerator;
+    private readonly ILogger<QuestionVotedIntegrationEventHandler> _logger;
+
 
     public QuestionVotedIntegrationEventHandler(
         QuestionDetailContext context,
-        ILogger<QuestionCreatedIntegrationEventHandler> logger)
+        ICacheService cacheService,
+        ICacheKeyGenerator cacheKeyGenerator,
+        ILogger<QuestionVotedIntegrationEventHandler> logger)
     {
         _context = context;
         _logger = logger;
+        _cacheService = cacheService;
+        _cacheKeyGenerator = cacheKeyGenerator;
     }
 
     public async Task HandleAsync(QuestionVotedIntegrationEvent integrationEvent)
@@ -40,6 +48,13 @@ public class QuestionVotedIntegrationEventHandler : IIntegrationEventHandler<Que
 
         var filter = Builders<Question>.Filter.Eq(field => field.Id, question.Id);
         await _context.Questions.ReplaceOneAsync(filter, question);
+
+
+        var cacheKey = _cacheKeyGenerator.GenerateCacheKey("GetQuestionDetailById", integrationEvent.QuestionId);
+        if (await _cacheService.AnyAsync(cacheKey))
+        {
+            await _cacheService.RemoveAsync(cacheKey);
+        }
     }
 
     private async Task UpdateUserScoreAsync(QuestionVotedIntegrationEvent integrationEvent)

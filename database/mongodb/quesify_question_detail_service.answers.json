@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$binary": {
+      "base64": "NBMbdqXQEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "QuestionId": {
+    "$binary": {
+      "base64": "qK9zXKXPEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "body": "Need to add this somewhere in a included header:",
+  "user_id": {
+    "$binary": {
+      "base64": "F7wif6XPEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "score": 2,
+  "creation_date": {
+    "$date": "2023-12-28T22:26:55.052Z"
+  }
+},
+{
+  "_id": {
+    "$binary": {
+      "base64": "yxKAtqXQEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "QuestionId": {
+    "$binary": {
+      "base64": "2gsutaXPEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "body": "By \"portable\" I mean that the data files written on an arbitrary platform+compiler can be read on any other platform+compiler. By \"non-portable\", I mean that's not necessarily the case. Endiannes matters, and compilers could possibly make a difference too. You could add additional handling for such situations at the cost of performance. In this answer, I'll assume you're reading and writing on the same machine.",
+  "user_id": {
+    "$binary": {
+      "base64": "F7wif6XPEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "score": 2,
+  "creation_date": {
+    "$date": "2023-12-28T22:31:08.383Z"
+  }
+},
+{
+  "_id": {
+    "$binary": {
+      "base64": "1CAfpaXUEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "QuestionId": {
+    "$binary": {
+      "base64": "qK9zXKXPEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "body": "Build your API to support paging. Use the Virtualize components ItemsProvider property not Items. This will fix the issue. Implement the CancelationToken for even more performance.\r\n\r\nAn alternative to adding paging to your API is to use ODATA.\r\n\r\nThis will reduce the number of elements the client is processing to the number of elements visible + (OverscanCount * 2) + 2.",
+  "user_id": {
+    "$binary": {
+      "base64": "sUHmqaXOEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "score": 1,
+  "creation_date": {
+    "$date": "2023-12-28T23:00:01.559Z"
+  }
+},
+{
+  "_id": {
+    "$binary": {
+      "base64": "3Ua0SaXYEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "QuestionId": {
+    "$binary": {
+      "base64": "4658aqXVEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "user_id": {
+    "$binary": {
+      "base64": "sUHmqaXOEe6CjiArINPC4Q==",
+      "subType": "03"
+    }
+  },
+  "score": 1,
+  "creation_date": {
+    "$date": "2023-12-28T23:28:54.898Z"
+  }
+}]

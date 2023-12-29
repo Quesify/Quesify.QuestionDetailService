@@ -30,14 +30,14 @@ public class AnswerVotedIntegrationEventHandler : IIntegrationEventHandler<Answe
 
     public async Task HandleAsync(AnswerVotedIntegrationEvent integrationEvent)
     {
+        await UpdateNewAnswerScoreAsync(integrationEvent);
+        await UpdateUserScoreAsync(integrationEvent);
+
         var cacheKey = _cacheKeyGenerator.GenerateCacheKey("GetQuestionDetailById", integrationEvent.QuestionId);
         if (await _cacheService.AnyAsync(cacheKey))
         {
             await _cacheService.RemoveAsync(cacheKey);
         }
-
-        await UpdateNewAnswerScoreAsync(integrationEvent);
-        await UpdateUserScoreAsync(integrationEvent);
     }
 
     private async Task UpdateNewAnswerScoreAsync(AnswerVotedIntegrationEvent integrationEvent)
